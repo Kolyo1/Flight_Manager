@@ -1,0 +1,14 @@
+D:\Александър - ИТ кариера\Модул 13\FlightManager1\FMDB\Data\obj\Debug\net7.0\Data.csproj.AssemblyReference.cache
+D:\Александър - ИТ кариера\Модул 13\FlightManager1\FMDB\Data\obj\Debug\net7.0\Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Александър - ИТ кариера\Модул 13\FlightManager1\FMDB\Data\obj\Debug\net7.0\Data.AssemblyInfoInputs.cache
+D:\Александър - ИТ кариера\Модул 13\FlightManager1\FMDB\Data\obj\Debug\net7.0\Data.AssemblyInfo.cs
+D:\Александър - ИТ кариера\Модул 13\FlightManager1\FMDB\Data\obj\Debug\net7.0\Data.csproj.CoreCompileInputs.cache
+D:\Александър - ИТ кариера\Модул 13\FlightManager1\FMDB\Data\bin\Debug\net7.0\Data.deps.json
+D:\Александър - ИТ кариера\Модул 13\FlightManager1\FMDB\Data\bin\Debug\net7.0\Data.runtimeconfig.json
+D:\Александър - ИТ кариера\Модул 13\FlightManager1\FMDB\Data\bin\Debug\net7.0\Data.dll
+D:\Александър - ИТ кариера\Модул 13\FlightManager1\FMDB\Data\bin\Debug\net7.0\Data.pdb
+D:\Александър - ИТ кариера\Модул 13\FlightManager1\FMDB\Data\obj\Debug\net7.0\Data.dll
+D:\Александър - ИТ кариера\Модул 13\FlightManager1\FMDB\Data\obj\Debug\net7.0\refint\Data.dll
+D:\Александър - ИТ кариера\Модул 13\FlightManager1\FMDB\Data\obj\Debug\net7.0\Data.pdb
+D:\Александър - ИТ кариера\Модул 13\FlightManager1\FMDB\Data\obj\Debug\net7.0\Data.genruntimeconfig.cache
+D:\Александър - ИТ кариера\Модул 13\FlightManager1\FMDB\Data\obj\Debug\net7.0\ref\Data.dll

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "z7WQGUiSuINuBoSlmnmbi9Orlx4WbqS3gCtslLOqiMvmSNPUMvRADTPi6gTOeL18cetuI1FMoqu57oL2aCNRQQ==",
+  "dgSpecHash": "AgcPgS1KpnIrBeLHalRW3/14CjJ2UeF0BYvw7JiBBgFhIJ969tw17hD465CC566KTT7erW1in5U4rXphIurXAA==",
   "success": true,
-  "projectFilePath": "H:\\12 клас - ИТ кариера\\Module 13 Project\\FlightManagerASP\\Data\\Data.csproj",
+  "projectFilePath": "H:\\12 клас - ИТ кариера\\Module 13\\FMDB\\Flight_Manager\\FlightManagerASP\\Data\\Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alexander\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Alexander\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

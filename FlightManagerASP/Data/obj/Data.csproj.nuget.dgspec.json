@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\12 клас - ИТ кариера\\Module 13 Project\\FlightManagerASP\\Data\\Data.csproj": {}
+    "H:\\12 клас - ИТ кариера\\Module 13\\FMDB\\Flight_Manager\\FlightManagerASP\\Data\\Data.csproj": {}
   },
   "projects": {
-    "H:\\12 клас - ИТ кариера\\Module 13 Project\\FlightManagerASP\\Data\\Data.csproj": {
+    "H:\\12 клас - ИТ кариера\\Module 13\\FMDB\\Flight_Manager\\FlightManagerASP\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\12 клас - ИТ кариера\\Module 13 Project\\FlightManagerASP\\Data\\Data.csproj",
+        "projectUniqueName": "H:\\12 клас - ИТ кариера\\Module 13\\FMDB\\Flight_Manager\\FlightManagerASP\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "H:\\12 клас - ИТ кариера\\Module 13 Project\\FlightManagerASP\\Data\\Data.csproj",
+        "projectPath": "H:\\12 клас - ИТ кариера\\Module 13\\FMDB\\Flight_Manager\\FlightManagerASP\\Data\\Data.csproj",
         "packagesPath": "C:\\Users\\Alexander\\.nuget\\packages\\",
-        "outputPath": "H:\\12 клас - ИТ кариера\\Module 13 Project\\FlightManagerASP\\Data\\obj\\",
+        "outputPath": "H:\\12 клас - ИТ кариера\\Module 13\\FMDB\\Flight_Manager\\FlightManagerASP\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

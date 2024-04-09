@@ -12,3 +12,17 @@ D:\Александър - ИТ кариера\Модул 13\FlightManager1\FMDB\
 D:\Александър - ИТ кариера\Модул 13\FlightManager1\FMDB\Data\obj\Debug\net7.0\Data.pdb
 D:\Александър - ИТ кариера\Модул 13\FlightManager1\FMDB\Data\obj\Debug\net7.0\Data.genruntimeconfig.cache
 D:\Александър - ИТ кариера\Модул 13\FlightManager1\FMDB\Data\obj\Debug\net7.0\ref\Data.dll
+H:\12 клас - ИТ кариера\Module 13\FMDB\Flight_Manager\FMDB\Data\bin\Debug\net7.0\Data.deps.json
+H:\12 клас - ИТ кариера\Module 13\FMDB\Flight_Manager\FMDB\Data\bin\Debug\net7.0\Data.runtimeconfig.json
+H:\12 клас - ИТ кариера\Module 13\FMDB\Flight_Manager\FMDB\Data\bin\Debug\net7.0\Data.dll
+H:\12 клас - ИТ кариера\Module 13\FMDB\Flight_Manager\FMDB\Data\bin\Debug\net7.0\Data.pdb
+H:\12 клас - ИТ кариера\Module 13\FMDB\Flight_Manager\FMDB\Data\obj\Debug\net7.0\Data.csproj.AssemblyReference.cache
+H:\12 клас - ИТ кариера\Module 13\FMDB\Flight_Manager\FMDB\Data\obj\Debug\net7.0\Data.GeneratedMSBuildEditorConfig.editorconfig
+H:\12 клас - ИТ кариера\Module 13\FMDB\Flight_Manager\FMDB\Data\obj\Debug\net7.0\Data.AssemblyInfoInputs.cache
+H:\12 клас - ИТ кариера\Module 13\FMDB\Flight_Manager\FMDB\Data\obj\Debug\net7.0\Data.AssemblyInfo.cs
+H:\12 клас - ИТ кариера\Module 13\FMDB\Flight_Manager\FMDB\Data\obj\Debug\net7.0\Data.csproj.CoreCompileInputs.cache
+H:\12 клас - ИТ кариера\Module 13\FMDB\Flight_Manager\FMDB\Data\obj\Debug\net7.0\Data.dll
+H:\12 клас - ИТ кариера\Module 13\FMDB\Flight_Manager\FMDB\Data\obj\Debug\net7.0\refint\Data.dll
+H:\12 клас - ИТ кариера\Module 13\FMDB\Flight_Manager\FMDB\Data\obj\Debug\net7.0\Data.pdb
+H:\12 клас - ИТ кариера\Module 13\FMDB\Flight_Manager\FMDB\Data\obj\Debug\net7.0\Data.genruntimeconfig.cache
+H:\12 клас - ИТ кариера\Module 13\FMDB\Flight_Manager\FMDB\Data\obj\Debug\net7.0\ref\Data.dll

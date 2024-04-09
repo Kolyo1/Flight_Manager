@@ -34,5 +34,10 @@ namespace Data.Models
         [Range(0, 1000)]
         public int BusinessPassengerCapacity { get; set; }
 
+        public Flight()
+        {
+            
+        }
+
     }
 }

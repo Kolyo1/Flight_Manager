@@ -41,5 +41,9 @@ namespace Data.Models
         public string PhoneNumber { get; set; }
         public bool isAdmin { get; set; }
 
+        public dbUser()
+        {
+            
+        }
     }
 }

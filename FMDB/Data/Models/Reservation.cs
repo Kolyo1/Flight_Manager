@@ -42,5 +42,10 @@ namespace Data.Models
         [ForeignKey("FlightId")]
         public int FlightId { get; set; }
 
+        public Reservation()
+        {
+            
+        }
+
     }
 }

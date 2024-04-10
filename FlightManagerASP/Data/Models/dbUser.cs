@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 namespace Data.Models
 {
     [Index(nameof(dbUser.EGN), IsUnique = true)]
-    public class dbUser : IdentityUser
+    public class dbUser : IdentityUser<string>
     {
         [Key]
         public int Id { get; set; }

@@ -15,7 +15,6 @@ namespace FlightManager.Controllers
             _context = context;
         }
 
-
         // GET: Users
         public async Task<IActionResult> Index()
         {
@@ -53,7 +52,7 @@ namespace FlightManager.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,UserName,Password,Email,FirstName,LastName,EGN,Address,PhoneNumber,isAdmin")] dbUser user)
+        public async Task<IActionResult> Create([Bind("Id,UserName,Password,Email,FirstName,LastName,EGN,Address,PhoneNumber,Role")] dbUser user)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +84,7 @@ namespace FlightManager.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,UserName,Password,Email,FirstName,LastName,EGN,Address,PhoneNumber,isAdmin")] dbUser user)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,UserName,Password,Email,FirstName,LastName,EGN,Address,PhoneNumber,Role")] dbUser user)
         {
             if (id != user.Id)
             {

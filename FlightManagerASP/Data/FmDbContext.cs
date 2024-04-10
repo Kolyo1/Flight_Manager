@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Data
 {
-    public class FmDbContext : IdentityDbContext<dbUser>
+    public class FmDbContext : IdentityDbContext<dbUser, IdentityRole, string>
     {
         public virtual DbSet<Flight> Flights { get; set; }
         public virtual DbSet<Reservation> Reservations { get; set; }

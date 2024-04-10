@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using System.Configuration;
 
 namespace FlightManager
@@ -62,27 +63,23 @@ namespace FlightManager
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<FmDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDatabaseDeveloperPageExceptionFilter();
+            services.AddControllersWithViews();
+
+            services.AddDbContext<FmDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<dbUser, IdentityRole>(options =>
             {
-                options.SignIn.RequireConfirmedAccount = true;
-
                 options.Password.RequireDigit = false;
                 options.Password.RequiredLength = 3;
                 options.Password.RequireLowercase = false;
                 options.Password.RequireNonAlphanumeric = false;
                 options.Password.RequireUppercase = false;
                 options.Password.RequiredUniqueChars = 0;
-
             })
-                .AddEntityFrameworkStores<FmDbContext>();
+            .AddEntityFrameworkStores<FmDbContext>();
+            services.AddHttpContextAccessor();
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
@@ -170,5 +167,7 @@ namespace FlightManager
                 }
             }
         }
+        
+
     }
 }

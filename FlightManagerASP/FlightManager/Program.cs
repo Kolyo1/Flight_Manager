@@ -159,6 +159,7 @@ namespace FlightManager
         });
         */
 
+        /*
         private async System.Threading.Tasks.Task CreateUserRoles(IServiceProvider serviceProvider)
         {
             var RoleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
@@ -203,7 +204,49 @@ namespace FlightManager
             }
 
         }
+        */
 
+        private static async Task CreateUserRoles(IServiceProvider serviceProvider)
+        {
+            var RoleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+            var UserManager = serviceProvider.GetRequiredService<UserManager<dbUser>>();
+            string[] roleNames = { "Admin", "Employee" };
 
+            foreach (var roleName in roleNames)
+            {
+                if (!await RoleManager.RoleExistsAsync(roleName))
+                {
+                    var roleResult = await RoleManager.CreateAsync(new IdentityRole(roleName));
+                    if (!roleResult.Succeeded)
+                    {
+                        // Handle error if role creation fails
+                    }
+                }
+            }
+
+            // Admin user check and creation 
+            var admin = new dbUser()
+            {
+                UserName = "Admin",
+                Email = "admin@admin.com",
+                EmailConfirmed = true,
+                FirstName = "Admin",
+                LastName = "Admin",
+                EGN = "0000000000",
+                Address = "AdminNoAddress",
+                PhoneNumber = "0000000000"
+            };
+
+            string password = "admin12345"; // Use the password specified in the admin object
+            var _user = await UserManager.FindByNameAsync(admin.UserName);
+            if (_user == null)
+            {
+                var chkUser = await UserManager.CreateAsync(admin, password);
+                if (chkUser.Succeeded)
+                {
+                    await UserManager.AddToRoleAsync(admin, "Admin");
+                }
+            }
+        }
     }
 }

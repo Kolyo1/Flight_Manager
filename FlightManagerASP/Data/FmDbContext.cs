@@ -14,7 +14,6 @@ namespace Data
     {
         public virtual DbSet<Flight> Flights { get; set; }
         public virtual DbSet<Reservation> Reservations { get; set; }
-        public virtual DbSet<dbUser> Users { get; set; }
 
         public FmDbContext()
         {

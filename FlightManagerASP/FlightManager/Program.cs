@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Configuration;
 
 namespace FlightManager
@@ -47,6 +48,7 @@ namespace FlightManager
 
             app.UseAuthorization();
 
+
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
@@ -54,6 +56,39 @@ namespace FlightManager
 
             app.Run();
             
+        }
+
+
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider serviceProvider)
+        {
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+                app.UseMigrationsEndPoint();
+            }
+            else
+            {
+                app.UseExceptionHandler("/Home/Error");
+                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                app.UseHsts();
+            }
+            app.UseHttpsRedirection();
+            app.UseStaticFiles();
+
+            app.UseRouting();
+
+            app.UseAuthentication();
+            app.UseAuthorization();
+
+            CreateUserRoles(serviceProvider).Wait();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
+            });
         }
 
         public Program(IConfiguration configuration)
@@ -124,50 +159,51 @@ namespace FlightManager
         });
         */
 
-        private async System.Threading.Tasks.Task Seed(IServiceProvider serviceProvider)
+        private async System.Threading.Tasks.Task CreateUserRoles(IServiceProvider serviceProvider)
         {
             var RoleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
             var UserManager = serviceProvider.GetRequiredService<UserManager<dbUser>>();
             string[] roleNames = { "Admin", "Employee" };
-            IdentityResult result;
-
+            IdentityResult roleResult;
             foreach (var roleName in roleNames)
             {
                 var roleCheck = await RoleManager.RoleExistsAsync(roleName);
                 if (!roleCheck)
                 {
-                    result = await RoleManager.CreateAsync(new IdentityRole(roleName));
+                    //create the roles and seed them to the database 
+                    roleResult = await RoleManager.CreateAsync(new IdentityRole(roleName));
                 }
             }
-            var admin = new dbUser
+            //Admin user check and creation 
+            var admin = new dbUser()
             {
-                UserName = "Administrator",
-                Password = "admin123",
-                NormalizedUserName = "Admin",
-                Email = "admin@admin.admin",
+                UserName = "Admin",
+                Email = "admin@admin.com",
+                Password = "admin12345",
                 EmailConfirmed = true,
                 FirstName = "Admin",
                 LastName = "Admin",
                 EGN = "0000000000",
-                Address = "Admin/NoAddress",
+                Address = "AdminNoAddress",
                 PhoneNumber = "0000000000",
-                Role = "Admin",
-                LockoutEnabled = false
+                Role = "Admin"
             };
 
             string password = "password";
             var _user = await UserManager.FindByNameAsync(admin.UserName);
             if (_user == null)
             {
-                IdentityResult checkUser = await UserManager.CreateAsync(admin, password);
+                IdentityResult chkUser = await UserManager.CreateAsync(admin, password);
+                if (chkUser.Succeeded)
 
-                if (checkUser.Succeeded)
                 {
                     await UserManager.AddToRoleAsync(admin, "Admin");
                 }
+
             }
+
         }
-        
+
 
     }
 }

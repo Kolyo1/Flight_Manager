@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Configuration;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
@@ -53,8 +54,8 @@ namespace Data.Models
         [Display(Name = "Phone Number")]
         public string PhoneNumber { get; set; }
         [Required]
-        [Display(Name = "Admin Privileges")]
-        public bool isAdmin { get; set; }
-
+        //[RegularExpression("^(Admin|Employee)$", ErrorMessage = "Role must be either admin or employee. (If admin exists, there can not be another one)")]
+        [Display(Name = "Role")]
+        public string Role { get; set; }
     }
 }

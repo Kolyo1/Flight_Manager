@@ -2,6 +2,7 @@
 using Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace FlightManager.Controllers
 {
@@ -13,6 +14,7 @@ namespace FlightManager.Controllers
         {
             _context = context;
         }
+
 
         // GET: Users
         public async Task<IActionResult> Index()

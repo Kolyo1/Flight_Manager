@@ -37,7 +37,7 @@ namespace Data.Models
         public string PlaneType { get; set; }
         [Required]
         [MaxLength(5)]
-        [RegularExpression(@"^[A-Z0-9]+$", ErrorMessage = "Plane Code must contain only uppercase letters and digits.")]
+        [RegularExpression(@"^(?=.*[A-Z])(?=.*\d)[A-Z\d]+$", ErrorMessage = "Plane Code must contain only uppercase letters and digits.")]
         [Display(Name = "Plane Code")]
         public string PlaneUniqueNumber { get; set; }
         [Required]

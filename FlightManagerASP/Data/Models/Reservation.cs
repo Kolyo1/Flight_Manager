@@ -45,7 +45,7 @@ namespace Data.Models
         public string Nationality { get; set; }
         [Required]
         [Display(Name = "Ticket Type")]
-        [RegularExpression("^(Ordinary|Business)$", ErrorMessage = "Ticket Type must be either Ordinary or Business.")]
+        //[RegularExpression("^(Ordinary|Business)$", ErrorMessage = "Ticket Type must be either Ordinary or Business.")]
         [StringLength(8, MinimumLength = 8)]
         public string TicketType { get; set; }
 

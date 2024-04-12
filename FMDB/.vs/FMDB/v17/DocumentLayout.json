@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\Flight_Manager\\FMDB\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6396249F-EDC5-4FC8-9E42-0245E30E9407}|Data\\Data.csproj|d:\\flight_manager\\fmdb\\data\\data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{6396249F-EDC5-4FC8-9E42-0245E30E9407}|Data\\Data.csproj|solutionrelative:data\\data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Flight_Manager\\FMDB\\Data\\Data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Data\\Data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A71B98D0-4C02-47FC-A4DF-CFC97D15D4E8}|FMDB\\FMDB.csproj|d:\\flight_manager\\fmdb\\fmdb\\fmdb.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{A71B98D0-4C02-47FC-A4DF-CFC97D15D4E8}|FMDB\\FMDB.csproj|D:\\Flight_Manager\\FMDB\\fmdb\\fmdb.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{A71B98D0-4C02-47FC-A4DF-CFC97D15D4E8}|FMDB\\FMDB.csproj|solutionrelative:fmdb\\fmdb.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6396249F-EDC5-4FC8-9E42-0245E30E9407}|Data\\Data.csproj|d:\\flight_manager\\fmdb\\data\\data.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{6396249F-EDC5-4FC8-9E42-0245E30E9407}|Data\\Data.csproj|solutionrelative:data\\data.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Flight_Manager\\FMDB\\data\\data.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:data\\data.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,13 +34,12 @@
               "RelativeToolTip": "FMDB\\FMDB.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-04-12T14:46:09.846Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-12T14:46:09.846Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Data",
+              "Title": "Data.csproj",
               "DocumentMoniker": "D:\\Flight_Manager\\FMDB\\Data\\Data.csproj",
               "RelativeDocumentMoniker": "Data\\Data.csproj",
               "ToolTip": "D:\\Flight_Manager\\FMDB\\Data\\Data.csproj",
@@ -59,8 +58,7 @@
               "ToolTip": "D:\\Flight_Manager\\FMDB\\Data\\Data.csproj",
               "RelativeToolTip": "Data\\Data.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-04-12T14:43:56.505Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-12T14:43:56.505Z"
             }
           ]
         }

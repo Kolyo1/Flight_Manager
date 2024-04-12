@@ -17,35 +17,41 @@ namespace Data.Models
     {
         [Key]
         public int Id { get; set; }
-        [NotNull]
-        [MaxLength(30)]
+        [Required]
+        [StringLength(30, ErrorMessage = "First name must be longer than 2 letters.", MinimumLength = 3)]
+        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "First name must contain only letters.")]
+        [Display(Name = "First Name")]
         public string FirstName { get; set; }
-        [NotNull]
-        [MaxLength(30)]
+        [Required]
+        [StringLength(30, ErrorMessage = "Middle name must be longer than 2 letters.", MinimumLength = 3)]
+        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "Middle name must contain only letters.")]
+        [Display(Name = "Middle Name")]
         public string MiddleName { get; set; }
-        [NotNull]
-        [MaxLength(30)]
+        [Required]
+        [StringLength(30, ErrorMessage = "Last name must be longer than 2 letters.", MinimumLength = 3)]
+        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "Last name must contain only letters.")]
+        [Display(Name = "Last Name")]
         public string LastName { get; set; }
-        [NotNull]
-        [MaxLength(10)]
-        [RegularExpression("^[0-9]*$", ErrorMessage = "EGN must contain only digits")]
+        [Required]
+        [StringLength(10, ErrorMessage = "EGN must be exactly 10 digits long.", MinimumLength = 10)]
+        [RegularExpression("^[0-9]*$", ErrorMessage = "EGN must contain only digits.")]
         public string EGN { get; set; }
-        [NotNull]
-        [MaxLength(10)]
-        [RegularExpression("^[0-9]*$", ErrorMessage = "Phone number must contain only digits")]
+        [Required]
+        [StringLength(10, ErrorMessage = "Phone number must be exactly 10 digits long.", MinimumLength = 10)]
+        [RegularExpression("^[0-9]*$", ErrorMessage = "Phone number must contain only digits.")]
+        [Display(Name = "Phone Number")]
         public string PhoneNumber { get; set; }
-        [NotNull]
+        [Required(ErrorMessage = "Nationality is required.")]
+        [StringLength(40, MinimumLength = 5)]
         public string Nationality { get; set; }
-        [NotNull]
-        public TicketType TicketType { get; set; }
+        [Required]
+        [Display(Name = "Ticket Type")]
+        //[RegularExpression("^(Ordinary|Business)$", ErrorMessage = "Ticket Type must be either Ordinary or Business.")]
+        [StringLength(8, MinimumLength = 8)]
+        public string TicketType { get; set; }
 
-        [ForeignKey("FlightId")]
-        public int FlightId { get; set; }
+        public virtual Flight Flight { get; set; }
 
-        public Reservation()
-        {
-            
-        }
 
     }
 }

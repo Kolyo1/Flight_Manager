@@ -8,13 +8,13 @@ using Microsoft.EntityFrameworkCore;
 using Data;
 using Data.Models;
 
-namespace FMDB.Controllers
+namespace FlightManager.Controllers
 {
     public class ReservationsController : Controller
     {
-        private readonly FmDBContext _context;
+        private readonly FmDbContext _context;
 
-        public ReservationsController(FmDBContext context)
+        public ReservationsController(FmDbContext context)
         {
             _context = context;
         }
@@ -22,9 +22,9 @@ namespace FMDB.Controllers
         // GET: Reservations
         public async Task<IActionResult> Index()
         {
-              return _context.Reservations != null ? 
-                          View(await _context.Reservations.ToListAsync()) :
-                          Problem("Entity set 'FmDBContext.Reservations'  is null.");
+            return _context.Reservations != null ?
+                        View(await _context.Reservations.ToListAsync()) :
+                        Problem("Entity set 'FmDbContext.Reservations'  is null.");
         }
 
         // GET: Reservations/Details/5
@@ -56,7 +56,7 @@ namespace FMDB.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,FirstName,MiddleName,LastName,EGN,PhoneNumber,Nationality,TicketType,PassengerPrice,BusinessPrice,FlightId")] Reservation reservation)
+        public async Task<IActionResult> Create([Bind("Id,FirstName,MiddleName,LastName,EGN,PhoneNumber,Nationality,TicketType")] Reservation reservation)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +88,7 @@ namespace FMDB.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,MiddleName,LastName,EGN,PhoneNumber,Nationality,TicketType,PassengerPrice,BusinessPrice,FlightId")] Reservation reservation)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,MiddleName,LastName,EGN,PhoneNumber,Nationality,TicketType")] Reservation reservation)
         {
             if (id != reservation.Id)
             {
@@ -143,21 +143,21 @@ namespace FMDB.Controllers
         {
             if (_context.Reservations == null)
             {
-                return Problem("Entity set 'FmDBContext.Reservations'  is null.");
+                return Problem("Entity set 'FmDbContext.Reservations'  is null.");
             }
             var reservation = await _context.Reservations.FindAsync(id);
             if (reservation != null)
             {
                 _context.Reservations.Remove(reservation);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool ReservationExists(int id)
         {
-          return (_context.Reservations?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Reservations?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

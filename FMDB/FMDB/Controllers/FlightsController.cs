@@ -8,13 +8,13 @@ using Microsoft.EntityFrameworkCore;
 using Data;
 using Data.Models;
 
-namespace FMDB.Controllers
+namespace FlightManager.Controllers
 {
     public class FlightsController : Controller
     {
-        private readonly FmDBContext _context;
+        private readonly FmDbContext _context;
 
-        public FlightsController(FmDBContext context)
+        public FlightsController(FmDbContext context)
         {
             _context = context;
         }
@@ -22,9 +22,9 @@ namespace FMDB.Controllers
         // GET: Flights
         public async Task<IActionResult> Index()
         {
-              return _context.Flights != null ? 
-                          View(await _context.Flights.ToListAsync()) :
-                          Problem("Entity set 'FmDBContext.Flights'  is null.");
+            return _context.Flights != null ?
+                        View(await _context.Flights.ToListAsync()) :
+                        Problem("Entity set 'FmDbContext.Flights'  is null.");
         }
 
         // GET: Flights/Details/5
@@ -56,7 +56,7 @@ namespace FMDB.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,LocationTo,LocationFrom,TakeOffTime,LandingTime,PlaneType,PlaneUniqueNumber,PilotName,PassangerCapacity,BusinessPassengerCapacity")] Flight flight)
+        public async Task<IActionResult> Create([Bind("Id,LocationTo,LocationFrom,DepartureTime,ArrivalTime,PlaneType,PlaneUniqueNumber,PilotName,PassangerCapacity,BusinessPassengerCapacity")] Flight flight)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +88,7 @@ namespace FMDB.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,LocationTo,LocationFrom,TakeOffTime,LandingTime,PlaneType,PlaneUniqueNumber,PilotName,PassangerCapacity,BusinessPassengerCapacity")] Flight flight)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,LocationTo,LocationFrom,DepartureTime,ArrivalTime,PlaneType,PlaneUniqueNumber,PilotName,PassangerCapacity,BusinessPassengerCapacity")] Flight flight)
         {
             if (id != flight.Id)
             {
@@ -143,21 +143,21 @@ namespace FMDB.Controllers
         {
             if (_context.Flights == null)
             {
-                return Problem("Entity set 'FmDBContext.Flights'  is null.");
+                return Problem("Entity set 'FmDbContext.Flights'  is null.");
             }
             var flight = await _context.Flights.FindAsync(id);
             if (flight != null)
             {
                 _context.Flights.Remove(flight);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool FlightExists(int id)
         {
-          return (_context.Flights?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Flights?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

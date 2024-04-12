@@ -1,8 +1,9 @@
-﻿using FMDB.Models;
+﻿using Data.Models;
+using FMDB.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace FMDB.Controllers
+namespace FlightManager.Controllers
 {
     public class HomeController : Controller
     {

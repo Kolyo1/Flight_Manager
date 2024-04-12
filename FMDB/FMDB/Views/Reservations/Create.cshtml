@@ -48,11 +48,6 @@
                 <span asp-validation-for="TicketType" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FlightId" class="control-label"></label>
-                <input asp-for="FlightId" class="form-control" />
-                <span asp-validation-for="FlightId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
@@ -64,5 +59,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

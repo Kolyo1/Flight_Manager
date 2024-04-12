@@ -24,14 +24,14 @@
                 <span asp-validation-for="LocationFrom" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TakeOffTime" class="control-label"></label>
-                <input asp-for="TakeOffTime" class="form-control" />
-                <span asp-validation-for="TakeOffTime" class="text-danger"></span>
+                <label asp-for="DepartureTime" class="control-label"></label>
+                <input asp-for="DepartureTime" class="form-control" />
+                <span asp-validation-for="DepartureTime" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="LandingTime" class="control-label"></label>
-                <input asp-for="LandingTime" class="form-control" />
-                <span asp-validation-for="LandingTime" class="text-danger"></span>
+                <label asp-for="ArrivalTime" class="control-label"></label>
+                <input asp-for="ArrivalTime" class="form-control" />
+                <span asp-validation-for="ArrivalTime" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="PlaneType" class="control-label"></label>
@@ -70,5 +70,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

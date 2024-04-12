@@ -1,15 +1,16 @@
-﻿using Data;
-using Data.Models;
+﻿using Data.Models;
+using Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
-namespace FMDB.Controllers
+namespace FlightManager.Controllers
 {
     public class UsersController : Controller
     {
-        private readonly FmDBContext _context;
+        private readonly FmDbContext _context;
 
-        public UsersController(FmDBContext context)
+        public UsersController(FmDbContext context)
         {
             _context = context;
         }
@@ -19,7 +20,7 @@ namespace FMDB.Controllers
         {
             return _context.Users != null ?
                         View(await _context.Users.ToListAsync()) :
-                        Problem("Entity set 'FmDBContext.Users'  is null.");
+                        Problem("Entity set 'FmDbContext.Users'  is null.");
         }
 
         // GET: Users/Details/5
@@ -51,7 +52,7 @@ namespace FMDB.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,UserName,Password,Email,FirstName,LastName,EGN,Address,PhoneNumber,isAdmin")] dbUser user)
+        public async Task<IActionResult> Create([Bind("Id,UserName,Password,Email,FirstName,LastName,EGN,Address,PhoneNumber,Role")] dbUser user)
         {
             if (ModelState.IsValid)
             {
@@ -83,7 +84,7 @@ namespace FMDB.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,UserName,Password,Email,FirstName,LastName,EGN,Address,PhoneNumber,isAdmin")] dbUser user)
+        public async Task<IActionResult> Edit(int id, [Bind("UserName,Password,Email,FirstName,LastName,EGN,Address,PhoneNumber,Role")] dbUser user)
         {
             if (id != user.Id)
             {
@@ -138,7 +139,7 @@ namespace FMDB.Controllers
         {
             if (_context.Users == null)
             {
-                return Problem("Entity set 'FmDBContext.Users'  is null.");
+                return Problem("Entity set 'FmDbContext.Users'  is null.");
             }
             var user = await _context.Users.FindAsync(id);
             if (user != null)

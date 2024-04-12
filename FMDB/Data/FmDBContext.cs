@@ -1,4 +1,5 @@
 ﻿using Data.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -9,19 +10,37 @@ using System.Threading.Tasks;
 
 namespace Data
 {
-    public class FmDBContext : IdentityDbContext<dbUser>
+    public class FmDbContext : IdentityDbContext<dbUser, IdentityRole, string>
     {
-        public FmDBContext() { }
+        public virtual DbSet<Flight> Flights { get; set; }
+        public virtual DbSet<Reservation> Reservations { get; set; }
 
-        public DbSet<dbUser> Users{ get; set; }
-        public DbSet<Flight> Flights { get; set; }
-        public DbSet<Reservation> Reservations { get; set; }
+        public FmDbContext()
+        {
 
-        public FmDBContext(DbContextOptions<FmDBContext> options) : base(options) { }
+        }
+
+        public FmDbContext(DbContextOptions<FmDbContext> dbContextOptions) : base(dbContextOptions) { }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=FlightMDB;Integrated security=true;");
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=FlightManagerDB;Integrated security=true;");
+            }
+        }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+            builder.Entity<Reservation>()
+                .HasOne(f => f.Flight)
+                .WithMany(r => r.Reservations);
+            builder.Entity<Flight>()
+                .HasMany(r => r.Reservations)
+                .WithOne(f => f.Flight)
+                .OnDelete(DeleteBehavior.Cascade);
+
         }
     }
 }

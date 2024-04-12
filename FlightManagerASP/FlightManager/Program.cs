@@ -1,12 +1,10 @@
 using Data;
 using Data.Models;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Configuration;
+using Microsoft.Graph;
+using Microsoft.Graph.Models;
+
 
 namespace FlightManager
 {

@@ -1,0 +1,9 @@
+D:\Flight_Manager\FlightManagerASP\FlightManager\obj\Debug\net5.0\FlightManager.csproj.AssemblyReference.cache
+D:\Flight_Manager\FlightManagerASP\FlightManager\obj\Debug\net5.0\FlightManager.GeneratedMSBuildEditorConfig.editorconfig
+D:\Flight_Manager\FlightManagerASP\FlightManager\obj\Debug\net5.0\FlightManager.AssemblyInfoInputs.cache
+D:\Flight_Manager\FlightManagerASP\FlightManager\obj\Debug\net5.0\FlightManager.AssemblyInfo.cs
+D:\Flight_Manager\FlightManagerASP\FlightManager\obj\Debug\net5.0\FlightManager.csproj.CoreCompileInputs.cache
+D:\Flight_Manager\FlightManagerASP\FlightManager\obj\Debug\net5.0\FlightManager.MvcApplicationPartsAssemblyInfo.cache
+D:\Flight_Manager\FlightManagerASP\FlightManager\obj\Debug\net5.0\FlightManager.RazorAssemblyInfo.cache
+D:\Flight_Manager\FlightManagerASP\FlightManager\obj\Debug\net5.0\FlightManager.RazorAssemblyInfo.cs
+D:\Flight_Manager\FlightManagerASP\FlightManager\obj\Debug\net5.0\FlightManager.sourcelink.json

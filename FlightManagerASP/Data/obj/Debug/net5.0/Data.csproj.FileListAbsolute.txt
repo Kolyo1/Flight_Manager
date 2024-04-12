@@ -1,0 +1,6 @@
+D:\Flight_Manager\FlightManagerASP\Data\obj\Debug\net5.0\Data.csproj.AssemblyReference.cache
+D:\Flight_Manager\FlightManagerASP\Data\obj\Debug\net5.0\Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Flight_Manager\FlightManagerASP\Data\obj\Debug\net5.0\Data.AssemblyInfoInputs.cache
+D:\Flight_Manager\FlightManagerASP\Data\obj\Debug\net5.0\Data.AssemblyInfo.cs
+D:\Flight_Manager\FlightManagerASP\Data\obj\Debug\net5.0\Data.csproj.CoreCompileInputs.cache
+D:\Flight_Manager\FlightManagerASP\Data\obj\Debug\net5.0\Data.sourcelink.json
